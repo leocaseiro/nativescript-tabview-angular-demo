@@ -1,0 +1,20 @@
+<ActionBar title="My App Name" color="#d8292f"></ActionBar>
+<DockLayout>
+    <TabView #element [(ngModel)]="selectedIndex" selectedColor="#d8292f">
+        <template tabItem title="Listings" iconSource="{{selectedIndex === 0 ? 'res://dock' : 'res://dock1'}}">
+            <StackLayout>
+                <label text="Listings"></label>
+            </StackLayout>
+        </template>
+        <template tabItem title="Contacts" iconSource="{{selectedIndex === 1 ? 'res://stack' : 'res://stack1'}}">
+            <StackLayout>
+                <label text="Contacts"></label>
+            </StackLayout>
+        </template>
+        <template tabItem title="Open Homes" iconSource="{{selectedIndex === 2 ? 'res://wrap' : 'res://wrap1' }}">
+            <StackLayout>
+                <label text="Open Homes"></label>
+            </StackLayout>
+        </template>
+    </TabView>
+</DockLayout>
